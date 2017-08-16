@@ -35,3 +35,36 @@
     info.forEach(function(infoPiece){
       infoPiece.innerText = null;
       });
+
+
+<!-- part 2 ------------------------------------------------------------------------ -->
+
+1. var timeTravel = document.querySelector('.bar-default');
+  var div1 = document.querySelector('section > div');
+
+  div1.removeChild(timeTravel);
+
+2.
+  var pikachu = document.querySelector("#right-image img");
+  var parent = document.querySelector('#right-image');
+   for(var i = 0; i < 10; i++){
+     var pikachuClone = pikachu.cloneNode();
+     parent.appendChild(pikachuClone);
+   }
+
+3. var listItem = document.createElement('li');
+   var leftSpan = document.createElement('span');
+   var lastUpdated = document.createTextNode('Page last updated on');
+   leftSpan.appendChild(lastUpdated);
+   listItem.appendChild(leftSpan);
+
+
+
+   var rightSpan = document.createElement('span');
+   var date = document.createTextNode(new Date);
+   rightSpan.appendChild(date);
+   listItem.appendChild(rightSpan);
+
+
+   var info = document.querySelector(".bio-info");
+   info.appendChild(listItem);
